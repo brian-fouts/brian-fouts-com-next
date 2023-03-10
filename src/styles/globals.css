@@ -4,7 +4,7 @@
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
+  --mobile-width: 768px;
 }
 
 * {
@@ -54,10 +54,11 @@ a {
   color: white;
   position: fixed;
   top: 0;
-  padding: 0 5vw;
+  padding: 0 2vw;
   font-weight: bold;
   border-bottom: 1px solid rgb(145, 145, 145);
 }
+
 
 .navbar ul {
   list-style-type: none;
@@ -102,10 +103,18 @@ a {
   padding-top: 10px;
 }
 
-.navbar-links {
-  float: left;
-  width: 45%;
-  height: 100%;
+@media only screen and (min-width: 768px) {
+  .navbar-links {
+    float: left;
+    width: 45%;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
 }
 
 /* Page */
@@ -114,4 +123,19 @@ a {
   height: 100%;
   padding: 0 5vw;
   margin-top: 70px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hamburger-menu {
+    margin: 10px;
+    float: right;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hamburger-menu {
+    display: none;
+  }
 }
